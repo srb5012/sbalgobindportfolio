@@ -24,23 +24,23 @@ export function Academics() {
             </h3>
             <p className="text-ink-muted">{education.degree}</p>
           </div>
-          <p className="font-mono text-sm text-ink-muted">{education.detail}</p>
+          <p className="font-kicker text-sm text-ink-muted">{education.detail}</p>
         </div>
       </Reveal>
 
       {/* Spotlight courses */}
       <Reveal delay={80}>
         <div className="mt-10">
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">
+          <p className="font-kicker text-xs uppercase tracking-[0.15em] text-ink-muted">
             Favorite coursework
           </p>
-          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+          <div className="mt-1 grid gap-4 sm:grid-cols-3">
             {spotlightCourses.map((course) => (
               <div
                 key={course.code}
                 className="rounded-xl border border-hairline p-5"
               >
-                <p className="font-mono text-xs text-ink-muted">{course.code}</p>
+                <p className="font-kicker text-xs text-ink-muted">{course.code}</p>
                 <p className="mt-1 font-medium">{course.name}</p>
               </div>
             ))}
@@ -51,20 +51,20 @@ export function Academics() {
       {/* Other coursework */}
       <Reveal delay={120}>
         <div className="mt-8">
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">
+          <p className="font-kicker text-xs uppercase tracking-[0.15em] text-ink-muted">
             Also studied
           </p>
-          <p className="mt-3 text-ink-muted">{coursework.join(" · ")}</p>
+          <p className="mt-1 text-ink-muted">{coursework.join(" · ")}</p>
         </div>
       </Reveal>
 
       {/* Certificates */}
       <Reveal delay={160}>
         <div className="mt-8">
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">
+          <p className="font-kicker text-xs uppercase tracking-[0.15em] text-ink-muted">
             Certificates
           </p>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-1 space-y-2">
             {certificates.map((cert) => (
               <li
                 key={cert.name}
@@ -83,7 +83,7 @@ export function Academics() {
         {skills.map((group, i) => (
           <Reveal key={group.group} delay={i * 70}>
             <div className="grid gap-3 border-t border-hairline pt-6 md:grid-cols-[1fr_3fr]">
-              <p className="font-mono text-sm text-ink-muted">{group.group}</p>
+              <p className="font-kicker text-sm text-ink-muted">{group.group}</p>
               <ul className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <li

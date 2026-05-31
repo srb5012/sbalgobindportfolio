@@ -10,9 +10,9 @@
   --color-hairline: var(--hairline);
   --color-surface: var(--surface);
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
-    sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: "Courier New", var(--font-courier), Courier, "Courier Prime",
+    "Liberation Mono", "Nimbus Mono PS", ui-monospace, monospace;
+  --font-kicker: var(--font-mono);
 }
 
 /* Light: warm tan canvas */
@@ -49,7 +49,7 @@ html {
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition:

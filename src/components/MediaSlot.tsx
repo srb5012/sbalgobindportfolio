@@ -40,7 +40,7 @@ export function MediaSlot({
       style={{ aspectRatio: ratio }}
     >
       {kind === "video" ? <Video size={22} /> : <ImageIcon size={22} />}
-      <span className="font-mono text-[11px] uppercase tracking-wider">
+      <span className="font-kicker text-[11px] uppercase tracking-wider">
         {label}
       </span>
       <span className="text-[11px]">Coming soon</span>

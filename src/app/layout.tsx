@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
 import { SITE_URL } from "@/lib/site-url";
 import { BottomBar } from "@/components/BottomBar";
+
+const courier = Courier_Prime({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-courier",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,11 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning className={courier.variable}>
       <head>
         <script
           dangerouslySetInnerHTML={{

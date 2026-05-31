@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline pb-28 pt-12">
       <Container className="flex flex-col gap-1">
-        <p className="font-mono text-sm font-medium">{site.name}</p>
+        <p className="font-kicker text-sm">{site.name}</p>
         <p className="text-sm text-ink-muted">
           Good software should work for everyone.
         </p>

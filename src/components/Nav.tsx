@@ -45,7 +45,7 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6 sm:px-8">
-        <a href="/" className="font-mono text-sm font-medium tracking-tight">
+        <a href="/" className="font-kicker text-sm tracking-tight">
           {site.name}
         </a>
 

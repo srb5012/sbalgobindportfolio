@@ -22,7 +22,6 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  kicker: "Shawn Balgobind",
   headline: "Good software should work for everyone.",
   subline: "Not just the people who already know how to use it.",
   meta: "Software engineer & designer · NY-BOS",

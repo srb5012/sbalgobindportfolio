@@ -9,7 +9,7 @@ function Tags({ tags }: { tags: string[] }) {
       {tags.map((t) => (
         <li
           key={t}
-          className="rounded-full border border-hairline px-2.5 py-1 font-mono text-[11px] text-ink-muted"
+          className="rounded-full border border-hairline px-2.5 py-1 font-kicker text-[11px] text-ink-muted"
         >
           {t}
         </li>
@@ -41,7 +41,7 @@ function Heading({ project }: { project: Project }) {
   return (
     <div className="flex items-baseline justify-between gap-4">
       <h3 className="text-lg font-semibold tracking-tight">{project.title}</h3>
-      <span className="shrink-0 font-mono text-xs text-ink-muted">
+      <span className="shrink-0 font-kicker text-xs text-ink-muted">
         {project.date}
       </span>
     </div>

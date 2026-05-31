@@ -15,10 +15,10 @@ export function Contact() {
   return (
     <Section id="contact" bordered>
       <Reveal>
-        <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-normal tracking-tight text-balance sm:text-4xl lg:text-5xl">
           {contact.headline}
         </h2>
-        <p className="mt-5 max-w-xl text-ink-muted">{contact.line}</p>
+        <p className="mt-1 max-w-xl text-ink-muted">{contact.line}</p>
       </Reveal>
       <Reveal delay={100}>
         <div className="mt-10 flex flex-wrap gap-3">

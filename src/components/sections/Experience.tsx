@@ -16,10 +16,10 @@ export function Experience() {
       {/* Freelance */}
       <div className="mb-16">
         <Reveal>
-          <h3 className="font-mono text-sm uppercase tracking-[0.15em] text-ink-muted">
+          <h3 className="font-kicker text-sm uppercase tracking-[0.15em] text-ink-muted">
             Freelance web development &amp; design
           </h3>
-          <p className="mt-3 max-w-2xl leading-relaxed text-ink-muted">
+          <p className="mt-1 max-w-2xl leading-relaxed text-ink-muted">
             {freelance.intro}
           </p>
         </Reveal>
@@ -37,7 +37,7 @@ export function Experience() {
                   {project.tags.map((t) => (
                     <li
                       key={t}
-                      className="rounded-full border border-hairline px-2.5 py-1 font-mono text-[11px] text-ink-muted"
+                      className="rounded-full border border-hairline px-2.5 py-1 font-kicker text-[11px] text-ink-muted"
                     >
                       {t}
                     </li>
@@ -62,10 +62,10 @@ export function Experience() {
       {/* Teaching */}
       <div>
         <Reveal>
-          <h3 className="font-mono text-sm uppercase tracking-[0.15em] text-ink-muted">
+          <h3 className="font-kicker text-sm uppercase tracking-[0.15em] text-ink-muted">
             Teaching &amp; tutoring
           </h3>
-          <p className="mt-3 max-w-2xl leading-relaxed text-ink-muted">
+          <p className="mt-1 max-w-2xl leading-relaxed text-ink-muted">
             Making hard things usable for newcomers, the same belief in a
             classroom.
           </p>
@@ -77,7 +77,7 @@ export function Experience() {
                 <div>
                   <h4 className="font-semibold tracking-tight">{job.role}</h4>
                   <p className="text-sm text-ink-muted">{job.org}</p>
-                  <p className="mt-1 font-mono text-xs text-ink-muted">
+                  <p className="mt-1 font-kicker text-xs text-ink-muted">
                     {job.dates}
                   </p>
                 </div>
