@@ -43,7 +43,7 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-5 flex flex-wrap gap-5">
+                <div className="mt-5">
                   <a
                     href={project.url}
                     target="_blank"
@@ -51,12 +51,6 @@ export function Experience() {
                     className="link-underline inline-flex items-center gap-1 text-sm font-medium"
                   >
                     Visit site <ArrowUpRight size={14} />
-                  </a>
-                  <a
-                    href={`/work/${project.slug}`}
-                    className="link-underline inline-flex items-center gap-1 text-sm font-medium"
-                  >
-                    Case study <ArrowUpRight size={14} />
                   </a>
                 </div>
               </article>
@@ -72,7 +66,7 @@ export function Experience() {
             Teaching &amp; tutoring
           </h3>
           <p className="mt-3 max-w-2xl leading-relaxed text-ink-muted">
-            Making hard things usable for newcomers — the same belief, in a
+            Making hard things usable for newcomers, the same belief in a
             classroom.
           </p>
         </Reveal>
@@ -106,6 +100,7 @@ export function Experience() {
                     <MediaSlot
                       kind="image"
                       label={job.media.label}
+                      src={job.media.src}
                       ratio="3 / 1"
                       className="mt-5"
                     />

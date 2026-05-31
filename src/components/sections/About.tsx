@@ -6,7 +6,7 @@ import { about } from "@/content/site";
 export function About() {
   return (
     <Section id="about" bordered>
-      <SectionHeading kicker="About" title="Clear thinking, made usable." />
+      <SectionHeading kicker="About" title="About the guy in the chair" />
       <div className="max-w-2xl">
         <Reveal>
           <p className="text-xl leading-relaxed text-pretty sm:text-2xl">

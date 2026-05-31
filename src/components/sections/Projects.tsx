@@ -8,7 +8,7 @@ export function Projects() {
     <Section id="projects" bordered>
       <SectionHeading
         kicker="Projects"
-        title="Where the data meets the build."
+        title="Selected Works"
         intro={projectsIntro}
       />
       <div className="grid gap-5 md:grid-cols-2">

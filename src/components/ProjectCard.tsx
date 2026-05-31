@@ -55,28 +55,6 @@ export function ProjectCard({
   project: Project;
   delay?: number;
 }) {
-  if (project.featured) {
-    return (
-      <Reveal delay={delay} className="md:col-span-2">
-        <article className="card rounded-xl border border-hairline bg-paper p-6 sm:p-8">
-          <div className="grid gap-6 md:grid-cols-2 md:items-center md:gap-10">
-            <div>
-              <Heading project={project} />
-              <p className="mt-3 leading-relaxed text-ink-muted">
-                {project.blurb}
-              </p>
-              <Tags tags={project.tags} />
-              <Links links={project.links} />
-            </div>
-            {project.media ? (
-              <MediaSlot kind={project.media.kind} label={project.media.label} />
-            ) : null}
-          </div>
-        </article>
-      </Reveal>
-    );
-  }
-
   return (
     <Reveal delay={delay} className="h-full">
       <article className="card flex h-full flex-col rounded-xl border border-hairline bg-paper p-6 sm:p-7">
@@ -88,6 +66,7 @@ export function ProjectCard({
           <MediaSlot
             kind={project.media.kind}
             label={project.media.label}
+            src={project.media.src}
             className="mt-5"
           />
         ) : null}

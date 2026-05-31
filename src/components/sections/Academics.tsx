@@ -1,6 +1,7 @@
 import { Section } from "../Section";
 import { SectionHeading } from "../SectionHeading";
 import { Reveal } from "../Reveal";
+import { CertLogo } from "../CertLogo";
 import {
   education,
   spotlightCourses,
@@ -12,7 +13,7 @@ import {
 export function Academics() {
   return (
     <Section id="academics" bordered>
-      <SectionHeading kicker="Academics" title="The foundation." />
+      <SectionHeading kicker="Academics" title="Fundamentals" />
 
       {/* Education */}
       <Reveal>
@@ -63,7 +64,17 @@ export function Academics() {
           <p className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted">
             Certificates
           </p>
-          <p className="mt-3 text-ink-muted">{certificates.join(" · ")}</p>
+          <ul className="mt-3 space-y-2">
+            {certificates.map((cert) => (
+              <li
+                key={cert.name}
+                className="flex items-center gap-2.5 text-ink-muted"
+              >
+                <CertLogo issuer={cert.issuer} className="shrink-0" />
+                <span>{cert.name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </Reveal>
 

@@ -1,23 +1,41 @@
 @import "tailwindcss";
 
-/* ── Design tokens (strictly monochrome, warm paper) ─────────────────────── */
-@theme {
-  --color-paper: #faf9f6; /* warm off-white canvas */
-  --color-ink: #1a1a1a; /* soft black */
-  --color-ink-muted: #6b6a66; /* secondary text */
-  --color-hairline: #e6e3dc; /* borders / rules */
-  --color-surface: #f2f0eb; /* subtle elevated bg */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Theme tokens → semantic vars (swap per theme below) ──────────────────── */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-hairline: var(--hairline);
+  --color-surface: var(--surface);
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
     sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
 
-/* ── Base ────────────────────────────────────────────────────────────────── */
+/* Light: warm tan canvas */
 :root {
+  --paper: #ded2a9;
+  --ink: #1a1a1a;
+  --ink-muted: #54503f;
+  --hairline: #c9bc93;
+  --surface: #e7debb;
   color-scheme: light;
 }
 
+/* Dark: warm near-black */
+.dark {
+  --paper: #21211e;
+  --ink: #f5f5f3;
+  --ink-muted: #a3a29b;
+  --hairline: #3a3a33;
+  --surface: #2a2a25;
+  color-scheme: dark;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -34,6 +52,9 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 ::selection {
@@ -120,47 +141,11 @@ body {
   border-color: var(--color-ink);
 }
 
-/* ── Minimal prose (case-study bodies) ───────────────────────────────────── */
-.prose-min {
-  max-width: 68ch;
-}
-.prose-min h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 2.5rem 0 0.75rem;
-}
-.prose-min h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 2rem 0 0.5rem;
-}
-.prose-min p {
-  margin: 1rem 0;
-  line-height: 1.75;
-}
-.prose-min ul {
-  margin: 1rem 0;
-  padding-left: 1.25rem;
-  list-style: disc;
-}
-.prose-min li {
-  margin: 0.4rem 0;
-  line-height: 1.65;
-}
-.prose-min li::marker {
-  color: var(--color-ink-muted);
-}
-.prose-min a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.prose-min strong {
-  font-weight: 600;
-}
-
 /* ── Reduced motion ──────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
   .reveal {
     opacity: 1 !important;
     transform: none !important;

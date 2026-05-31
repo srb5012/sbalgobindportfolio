@@ -1,13 +1,12 @@
 /**
  * Single source of truth for site copy.
- * Edit text here; components read from this file. Case-study prose lives in
- * src/content/work.ts.
+ * Edit text here; components read from this file.
  */
 
 export const site = {
   name: "Shawn Balgobind",
   role: "Software engineer & designer",
-  location: "NYC metro",
+  location: "NY-BOS",
   email: "srb5012@gmail.com",
   github: "https://github.com/srb5012",
   linkedin: "https://www.linkedin.com/in/shawn-balgobind-64ba722a2/",
@@ -26,20 +25,19 @@ export const hero = {
   kicker: "Shawn Balgobind",
   headline: "Good software should work for everyone.",
   subline: "Not just the people who already know how to use it.",
-  support: "Math to think it through. CS to build it.",
-  meta: "Software engineer & designer · NYC",
+  meta: "Software engineer & designer · NY-BOS",
   ctas: [
-    { label: "See the work", href: "#projects" },
+    { label: "See Work", href: "#projects" },
     { label: "Get in touch", href: "#contact" },
   ],
 } as const;
 
 export const about = {
-  lead: "I'm Shawn, a Computer Science & Mathematics graduate from Boston University, based in the NYC metro area.",
+  lead: "I'm Shawn, a Computer Science & Mathematics graduate from Boston University, based in the NY-BOS area.",
   paragraphs: [
-    "Mathematics taught me to think carefully about problems. Computer Science gave me the tools to solve them.",
-    "I care about software that works for everyone, not just the people who already know how to use it. Good technical work and real human impact should go hand in hand.",
-    "Right now I'm after two things: contributing at AI research labs, and building web products for freelance clients.",
+    "Since I was a child, systems and design have always fascinated me. I feel like the best inspiration comes from asking why something else works the way it does.",
+    "I believe the best solutions are ones that everyone can understand. Good technical work and real human impact should go hand in hand.",
+    "Right now I'm after one thing: Finding a way to engineer solutions to real world problems.",
   ],
 } as const;
 
@@ -55,14 +53,14 @@ export type FreelanceProject = {
 
 export const freelance = {
   intro:
-    "A growing part-time studio. I design and build fast, accessible sites, and I'm currently in contact with businesses across New York and Long Island.",
+    "A growing part-time studio. I design and build fast, accessible sites for businesses across New York, Long Island, and Boston.",
   projects: [
     {
       name: "Written Exposure Therapy",
       url: "https://www.writtenexposure.com/",
       slug: "written-exposure",
       blurb:
-        "An evidence-based PTSD treatment resource. Full-stack responsive build in React, Tailwind, and Node.js, with RESTful APIs and an indexed MongoDB database. Built in Agile sprints, delivered ahead of schedule, and still shipping features.",
+        "An evidence-based PTSD treatment resource. Full-stack responsive build in React, Tailwind, and Node.js, with RESTful APIs and an indexed MongoDB database, built in Agile sprints, delivered ahead of schedule, and still shipping features.",
       tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "REST"],
     },
     {
@@ -82,18 +80,18 @@ export type ExperienceItem = {
   dates: string;
   location: string;
   bullets: string[];
-  media?: { label: string; note: string };
+  media?: { label: string; src: string };
 };
 
 export const teaching: ExperienceItem[] = [
   {
     org: "Boston University",
     role: "Academic Tutor",
-    dates: "Sept 2025 – Present",
+    dates: "Sept 2025 – May 2026",
     location: "Boston, MA",
     bullets: [
-      "Break down the hardest parts of my own coursework (Calculus, Statistics, Data Structures, and Algorithm Design) for 15+ students just starting out.",
-      "Build custom learning materials and coding exercises, adapting to diverse, international learners.",
+      "Broke down the hardest parts of my own coursework (Calculus, Statistics, Data Structures, and Algorithm Design) for 15+ students just starting out.",
+      "Built custom learning materials and coding exercises, adapting to diverse, international learners.",
     ],
   },
   {
@@ -107,7 +105,7 @@ export const teaching: ExperienceItem[] = [
     ],
     media: {
       label: "Adelphi University · Garden City, NY",
-      note: "Photo coming soon",
+      src: "/media/lavner-adelphi.jpg",
     },
   },
 ];
@@ -120,24 +118,14 @@ export type Project = {
   blurb: string;
   tags: string[];
   links: { label: string; href: string; external?: boolean }[];
-  media?: { kind: "image" | "video"; label: string };
+  media?: { kind: "image" | "video"; label: string; src?: string };
   featured?: boolean;
 };
 
 export const projectsIntro =
-  "A through-line across my work: large, messy, real-world data. Feature engineering, statistical modeling, evaluation, experimentation, and pipelines (Pandas / NumPy / SciPy, with Apache Airflow for orchestration). It's the bridge from data analytics to AI research.";
+  "A few of the projects I've learned the most from.";
 
 export const projects: Project[] = [
-  {
-    title: "Hack For Impact · Harvard Hackathon",
-    date: "Nov 2024",
-    blurb:
-      "A 60-hour build: an iOS app (SwiftUI) that generates a personalized workout plan from your goals and preferences, backed by a Python / Flask service.",
-    tags: ["SwiftUI", "Python", "Flask", "iOS"],
-    links: [{ label: "Case study", href: "/work/hack-for-impact" }],
-    media: { kind: "video", label: "App demo" },
-    featured: true,
-  },
   {
     title: "Harvard HDSI Datathon",
     date: "Oct 2024",
@@ -147,11 +135,23 @@ export const projects: Project[] = [
     links: [
       { label: "Submission (PDF)", href: "/HDSI_Submission.pdf", external: true },
     ],
-    media: { kind: "image", label: "Dashboard excerpt" },
+    media: {
+      kind: "image",
+      label: "Dashboard excerpt",
+      src: "/media/hdsi-datathon.png",
+    },
+  },
+  {
+    title: "Hack For Impact · Harvard Hackathon",
+    date: "Nov 2024",
+    blurb:
+      "A 60-hour build: an iOS app (SwiftUI) that generates a personalized workout plan from your goals and preferences, backed by a Python / Flask service.",
+    tags: ["SwiftUI", "Python", "Flask", "iOS"],
+    links: [],
   },
   {
     title: "UFCPredictor",
-    date: "2024",
+    date: "Jun 2025",
     blurb:
       "ML models predicting UFC fight outcomes with XGBoost and Random Forest on the Kaggle UFC dataset, using EWMA feature engineering and TimeSeriesSplit validation to prevent data leakage. ~58% on stats alone, ~65% with market odds. Plus a from-scratch C++ ID3 decision tree.",
     tags: ["Python", "XGBoost", "scikit-learn", "C++", "Feature engineering"],
@@ -162,11 +162,15 @@ export const projects: Project[] = [
         external: true,
       },
     ],
-    media: { kind: "image", label: "Results & charts" },
+    media: {
+      kind: "image",
+      label: "Results & charts",
+      src: "/media/ufc-predictor.png",
+    },
   },
   {
     title: "CohesiveAudioVisualizer",
-    date: "2024",
+    date: "Aug 2025",
     blurb:
       "A real-time audio-to-color visualizer in Python: live mic input runs through an FFT (NumPy), and the dominant frequency maps to a color, with a Hann window, quadratic-interpolation peak detection, and EMA + hysteresis smoothing to kill jitter.",
     tags: ["Python", "NumPy", "FFT", "PyAudio", "DSP"],
@@ -177,7 +181,6 @@ export const projects: Project[] = [
         external: true,
       },
     ],
-    media: { kind: "video", label: "Screen recording" },
   },
   {
     title: "Stock Market Prediction Tool",
@@ -202,7 +205,7 @@ export const projects: Project[] = [
 export const education = {
   school: "Boston University",
   degree: "BA, Computer Science & Mathematics",
-  detail: "GPA 3.5 · 2022–2026 · NYC metro",
+  detail: "GPA 3.5 · 2022–2026",
 };
 
 export const spotlightCourses = [
@@ -220,10 +223,12 @@ export const coursework = [
   "System Design",
 ];
 
-export const certificates = [
-  "IBM Data Analyst Professional Certificate",
-  "FreeCodeCamp Web Design",
-  "Udemy Modern JavaScript",
+export type Certificate = { name: string; issuer: "ibm" | "freecodecamp" | "udemy" };
+
+export const certificates: Certificate[] = [
+  { name: "IBM Data Analyst Professional Certificate", issuer: "ibm" },
+  { name: "FreeCodeCamp Web Design", issuer: "freecodecamp" },
+  { name: "Udemy Modern JavaScript", issuer: "udemy" },
 ];
 
 export const skills = [

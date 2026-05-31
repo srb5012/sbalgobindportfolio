@@ -84,7 +84,7 @@ export function Hero() {
           }`}
         >
           <p className="font-mono text-sm text-ink-muted">
-            {hero.support} · {hero.meta}
+            {hero.meta}
           </p>
           <div className="flex flex-wrap gap-3">
             <a

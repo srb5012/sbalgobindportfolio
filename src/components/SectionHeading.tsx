@@ -10,15 +10,15 @@ export function SectionHeading({
   intro?: string;
 }) {
   return (
-    <Reveal className="mb-10 sm:mb-14">
+    <Reveal className="mb-6 sm:mb-8">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-muted">
         {kicker}
       </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+      <h2 className="mt-2 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
         {title}
       </h2>
       {intro ? (
-        <p className="mt-4 max-w-2xl leading-relaxed text-ink-muted">{intro}</p>
+        <p className="mt-2 max-w-2xl leading-relaxed text-ink-muted">{intro}</p>
       ) : null}
     </Reveal>
   );
