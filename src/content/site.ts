@@ -105,7 +105,7 @@ export const teaching: ExperienceItem[] = [
     ],
     media: {
       label: "Adelphi University · Garden City, NY",
-      src: "/media/lavner-adelphi.jpg",
+      src: "/media/lavner-adelphi.png",
     },
   },
 ];
