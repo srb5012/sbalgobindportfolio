@@ -204,7 +204,7 @@ export const projects: Project[] = [
 export const education = {
   school: "Boston University",
   degree: "BA, Computer Science & Mathematics",
-  detail: "GPA 3.5 · 2022–2026",
+  detail: "2022–2026",
 };
 
 export const spotlightCourses = [
