@@ -34,7 +34,7 @@ export const hero = {
 export const about = {
   lead: "I'm Shawn, a Computer Science & Mathematics graduate from Boston University, based in the NY-BOS area.",
   paragraphs: [
-    "Growing up, understanding different systems has always been part of my life. From Jazz music and cooking to coding and problem solving, I feel like my greatest inspiration comes from the places we think we shouldn't look.",
+    "Understanding different systems has always been and interest of mine. From Jazz music and cooking to coding and problem solving, I feel like my greatest inspiration comes from the places we think we shouldn't look.",
     "The best solutions are ones that everyone can understand. Good technical work and real human impact should go hand in hand.",
     "Right now I'm after one thing: Finding a way to engineer solutions to real world problems.",
   ],
