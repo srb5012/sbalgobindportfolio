@@ -66,7 +66,7 @@ export function Experience() {
             Teaching &amp; tutoring
           </h3>
           <p className="mt-1 max-w-2xl leading-relaxed text-ink-muted">
-            Making hard things usable for newcomers, the same belief in a
+            Making difficult topics digestible, the same belief in a
             classroom.
           </p>
         </Reveal>
