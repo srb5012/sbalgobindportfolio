@@ -53,7 +53,7 @@ export function Hero() {
       className="relative flex min-h-[88svh] items-center"
     >
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <h1 className="text-[2.5rem] font-normal leading-[1.06] tracking-tight text-pretty sm:text-6xl lg:text-7xl">
+        <h1 className="text-[2.5rem] font-light leading-[1.12] tracking-tight text-pretty sm:text-6xl lg:text-7xl">
           <span aria-hidden="true" className="tw-animated">
             {typed}
           </span>
@@ -79,7 +79,7 @@ export function Hero() {
             done ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="font-kicker text-sm italic text-ink-muted">
+          <p className="text-sm italic text-ink-muted">
             {hero.meta}
           </p>
           <div className="flex flex-wrap gap-3">

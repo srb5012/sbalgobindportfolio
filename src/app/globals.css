@@ -10,9 +10,9 @@
   --color-hairline: var(--hairline);
   --color-surface: var(--surface);
 
-  --font-mono: "Courier New", var(--font-courier), Courier, "Courier Prime",
-    "Liberation Mono", "Nimbus Mono PS", ui-monospace, monospace;
-  --font-kicker: var(--font-mono);
+  --font-serif: var(--font-merriweather), Merriweather, Lora, Georgia,
+    "Times New Roman", serif;
+  --font-kicker: var(--font-serif);
 }
 
 /* Light: warm tan canvas */
@@ -49,7 +49,7 @@ html {
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-mono);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition:

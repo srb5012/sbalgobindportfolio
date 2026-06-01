@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <Section id="contact" bordered>
       <Reveal>
-        <h2 className="max-w-3xl text-3xl font-normal tracking-tight text-balance sm:text-4xl lg:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-light tracking-tight text-balance sm:text-4xl lg:text-5xl">
           {contact.headline}
         </h2>
         <p className="mt-1 max-w-xl text-ink-muted">{contact.line}</p>

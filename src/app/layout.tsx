@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Courier_Prime } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -7,11 +7,11 @@ import { site } from "@/content/site";
 import { SITE_URL } from "@/lib/site-url";
 import { BottomBar } from "@/components/BottomBar";
 
-const courier = Courier_Prime({
-  weight: ["400", "700"],
+const merriweather = Merriweather({
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-courier",
+  variable: "--font-merriweather",
   display: "swap",
 });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={courier.variable}>
+    <html lang="en" suppressHydrationWarning className={merriweather.variable}>
       <head>
         <script
           dangerouslySetInnerHTML={{

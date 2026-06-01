@@ -17,7 +17,7 @@ export function SectionHeading({
       <p className="font-kicker text-xs uppercase tracking-[0.2em] text-ink-muted">
         {kicker}
       </p>
-      <h2 className="mt-8 text-3xl font-normal tracking-tight text-balance sm:text-4xl">
+      <h2 className="mt-8 text-3xl font-light tracking-tight text-balance sm:text-4xl">
         {title}
       </h2>
       {intro ? (
