@@ -66,14 +66,6 @@ export function Nav() {
               </a>
             );
           })}
-          <a
-            href={site.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-hairline px-4 py-2 text-sm transition-colors hover:border-ink"
-          >
-            Résumé
-          </a>
         </nav>
 
         <button
@@ -103,15 +95,6 @@ export function Nav() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={site.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="py-2.5 text-sm text-ink-muted hover:text-ink"
-            >
-              Résumé ↗
-            </a>
           </nav>
         </div>
       ) : null}

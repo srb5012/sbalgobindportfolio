@@ -1,4 +1,4 @@
-import { Mail, FileText } from "lucide-react";
+import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons";
 import { Section } from "../Section";
 import { Reveal } from "../Reveal";
@@ -6,7 +6,6 @@ import { contact, site } from "@/content/site";
 
 const actions = [
   { label: site.email, href: `mailto:${site.email}`, icon: Mail, external: false },
-  { label: "Download résumé", href: site.resume, icon: FileText, external: true },
   { label: "LinkedIn", href: site.linkedin, icon: LinkedinIcon, external: true },
   { label: "GitHub", href: site.github, icon: GithubIcon, external: true },
 ];

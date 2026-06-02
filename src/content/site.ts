@@ -10,7 +10,6 @@ export const site = {
   email: "srb5012@gmail.com",
   github: "https://github.com/srb5012",
   linkedin: "https://www.linkedin.com/in/shawn-balgobind-64ba722a2/",
-  resume: "/Resume.pdf",
 } as const;
 
 export const nav = [

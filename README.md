@@ -42,7 +42,6 @@ type-checking still runs.
 
 ## Add media / assets (placeholders today)
 Drop these into `public/` (links/slots already point at them):
-- `public/Resume.pdf` — **your résumé** (the “Résumé” nav button + Download link).
 - `public/HDSI_Submission.pdf` — the datathon submission.
 - Replace `MediaSlot` placeholders by swapping them for `<img>`/video in the
   relevant component once you have screenshots/recordings (Written Exposure &
